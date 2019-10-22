@@ -4,7 +4,7 @@ HTML/CSS/JS/React excercise.
 1) Clone repo.
 2) Run `yarn` to install dependencies. 
 3) Navigate to /simple-server and start the server with `node server`.
-4) Run `yarn start` to run the React App.
+4) Navigate back to root and run `yarn start` to run the React App.
 
 ## Notes
 1) Almost perfectly matches design screenshots at 1024px browser width
