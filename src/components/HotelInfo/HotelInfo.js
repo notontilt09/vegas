@@ -63,12 +63,12 @@ const HotelInfo = props => {
               <div className="stars">{renderStarRating()}</div>
             </div>
             <div className="hotel-map-phone">
-              <div onClick={scrollToMap} className="strip">
+              <button onClick={scrollToMap} className="strip">
                 <div className="icon-mark">
                   <Icon icon='mark' />
                 </div>
                 <h4>{props.hotel.location.areaName}</h4>
-              </div>
+              </button>
               <div className="phone">
                 <Icon icon='phone' />
                 <h4>{props.hotel.phoneNumber}</h4>
@@ -96,7 +96,7 @@ const HotelInfo = props => {
                 ))}
               </div>
               <div className="toggle-description">
-                <h3 className="show-hide" onClick={toggleExpanded}>{expanded ? 'HIDE FULL DESCRIPTION' : 'SHOW FULL DESCRIPTION'}</h3>
+                <button className="show-hide" onClick={toggleExpanded}>{expanded ? 'HIDE FULL DESCRIPTION' : 'SHOW FULL DESCRIPTION'}</button>
                 {expanded ? <Icon icon='up' /> : <Icon icon='down' />}
               </div>
             </>
@@ -112,7 +112,7 @@ const HotelInfo = props => {
                 ))}
               </div>
               <div className="toggle-details">
-                <h3 className="show-hide" onClick={toggleExpanded}>{expanded ? 'VIEW FEWER DETAILS' : 'VIEW MORE DETAILS'}</h3>
+                <button className="show-hide" onClick={toggleExpanded}>{expanded ? 'VIEW FEWER DETAILS' : 'VIEW MORE DETAILS'}</button>
                 {expanded ? <Icon icon='up' /> : <Icon icon='down' />}
               </div>
             </>

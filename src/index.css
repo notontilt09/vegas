@@ -53,3 +53,8 @@ html, body {
 	font-family: 'Helvetica';
 }
 
+/* remove outline from buttons if user is using a mouse */
+body:not(.user-is-tabbing) button:focus {
+	outline: none;
+}
+

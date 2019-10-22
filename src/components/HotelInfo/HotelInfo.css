@@ -50,6 +50,12 @@
   align-items: baseline;
   margin-right: 17px;
   cursor: pointer;
+  background: white;
+  border: none;
+}
+
+.strip h4 {
+  color: rgb(100, 97, 111);
 }
 
 .icon-mark {
@@ -89,7 +95,7 @@
 
 .hotel-basic-right h2 {
   margin-top: -8px;
-  padding-left: 20px;
+  padding-left: 28px;
   font-size: 6rem;
   font-weight: 400;
   color: rgb(242, 123, 32);
@@ -97,7 +103,7 @@
 
 .hotel-basic-right h3 {
   margin-top: 6px;
-  padding-left: 11%;
+  padding-left: 15%;
   font-size: 1.55rem;
   color: rgb(58, 58, 58);
 }
@@ -113,6 +119,22 @@
   font-size: 1.75rem;
 }
 
+.tab-navigator button {
+  background: rgb(126, 83, 138);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  opacity: 0.5;
+  border-bottom: 4px solid rgb(126, 83, 138);
+  color: white;
+  font-size: 1.75rem;
+  height: 100%;
+}
+
+.tab-navigator button:hover {
+  opacity: 1;
+}
+
 .tab {
   display: flex;
   justify-content: center;
@@ -126,21 +148,10 @@
   border-bottom: 4px solid rgb(217, 183, 223);
 }
 
-.tab span {
-  opacity: 0.5;
-}
-
-.tab:hover span {
-  opacity: 1;
-}
-
 .tab.active {
   border-bottom: 4px solid rgb(104, 42, 117);
-}
-
-.tab.active span {
   opacity: 1;
-}
+} 
 
 .description {
   width: 38%;
@@ -200,18 +211,7 @@
 }
 
 .toggle-description {
-  margin-top: 17px;
-}
-
-
-.toggle-description h3, .toggle-details h3 {
-  margin-right: 5px;
-  color: rgb(126, 84, 152);
-  cursor: pointer;
-}
-
-.toggle-description h3:hover, .toggle-details h3:hover {
-  text-decoration: underline;
+  margin-top: 13px;
 }
 
 .toggle-description .icon, .toggle-details .icon {
@@ -219,6 +219,22 @@
   padding: 1px;
   border-radius: 50%;
   fill: white;
+}
+
+.show-hide {
+  border: none;
+  font-size: 1.72rem;
+  margin-left: -6px;
+  color: rgb(126, 84, 152);
+  font-weight: 100;
+  cursor: pointer;
+  padding-right: 3px;
+  padding-left: 5px;
+  background: white;
+}
+
+.show-hide:hover {
+  text-decoration: underline;
 }
 
 .hotel-detail {

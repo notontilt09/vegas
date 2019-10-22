@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "core-js": "^3.3.3",
     "react": "^16.10.2",
+    "react-app-polyfill": "^1.0.4",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
@@ -21,12 +23,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie >= 9"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "last 1 ie version"
     ]
   }
 }

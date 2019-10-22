@@ -36,18 +36,29 @@ const App = () => {
   // this could be made dynamic to fetch data for the selected hotel when the user clicks on a hotel in the list
   // for this exercise, we only care about rendering venetian data.
   useEffect(() => {
-    axios.get('http://localhost:8888/api/hotels/venetian')
+    axios.get('http://192.168.0.11:8888/api/hotels/venetian')
       .then(res => {
         setHotelInfo(res.data);
       })
       .catch(err => console.log(err));
     
-    axios.get('http://localhost:8888/api/hotels/')
+    axios.get('http://192.168.0.11:8888/api/hotels/')
       .then(res => {
         // update Hotel
         setHotelList(filterDuplicatesAndSort(res.data.list))
       })
       .catch(err => console.log(err));
+    
+    // determine if we have a keyboard user to add accessibility features for easier site navigation
+    const handleFirstTab = e => {
+      if (e.keyCode === 9) {
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+      }
+    }
+
+    window.addEventListener('keydown', handleFirstTab);
+
   }, [])
 
   return (
